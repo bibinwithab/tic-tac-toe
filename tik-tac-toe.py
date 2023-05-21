@@ -32,7 +32,7 @@ def game():
     while not game_over:
         print_board()
 
-        print(f"Player {current_player}'s turn.")
+        print(f"********* Player {current_player}'s turn. *********")
         
         #getting a valid input
         valid_move = False
@@ -47,13 +47,13 @@ def game():
         #when a player wins
         if check_winner(current_player):
             print_board()
-            print(f"Player {current_player} won the game.")
+            print(f"********* Player {current_player} won the game. *********")
             game_over = True
         
         #when the game is a tie
         elif ' ' not in board:
             print_board()
-            print("Tie game.")
+            print("********* Tie game. **********")
             game_over = True
 
         else:
@@ -69,4 +69,4 @@ char = input("Wanna continue? (y/n): ").lower()
 if char == 'y':
     game()
 else:
-    print("Thanks for playing. See ya!")
+    print("********* Thanks for playing. See ya! *********")
